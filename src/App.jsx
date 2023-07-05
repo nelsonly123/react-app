@@ -21,23 +21,25 @@ function App() {
   return (
     <>
       <h1 className="text-3xl font-bold underline text-center">Vite + React + Tailwind</h1>
+      <div className='overflow-auto h-64'>
         {counter.map((id) => 
-          <div key={id}>
+          <ul key={id}>
             <Counter 
               id={id} 
               handleAddCounter={handleAddCounter} 
               handleRemoveSingleCounter={handleRemoveSingleCounter}
             />
-          </div>)}
-      <div className='flex text-3xl font-bold text-center justify-center'>
+          </ul>)}
+        </div>
+      <div className='text-2xl font-bold text-center'>
         <button
-          className="h-10 px-5 m-2 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700" 
+          className="h-10 px-5 m-2 text-blue-100 transition-colors duration-150 bg-green-600 rounded-lg focus:shadow-outline hover:bg-green-700" 
           onClick={() => handleAddCounter()}
           >
             Add Counter
             </button>
         <button 
-          className="h-10 px-5 m-2 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700" 
+          className="h-10 px-5 m-2 text-blue-100 transition-colors duration-150 bg-red-600 rounded-lg focus:shadow-outline hover:bg-red-700" 
           onClick={() => handleRemoveAllCounter()}
           >
             Remove all counters
