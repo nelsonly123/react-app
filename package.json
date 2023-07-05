@@ -1,7 +1,7 @@
 {
   "homepage": "https://nelsonly123.github.io/react-app",
   "name": "react-app",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
