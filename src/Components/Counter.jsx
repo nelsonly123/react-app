@@ -11,9 +11,11 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
     const incrementCounter = () => {
         setCount((prevCount) => prevCount + 1)
     }
+
     const decrementCounter = () => {
         setCount((prevCount) => prevCount - 1)
     }
+    
     const handleResetCounter = () => {
         setCount(0);
     }
@@ -22,14 +24,14 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
         if(intervalRef.current) return;
         intervalRef.current = setInterval(() => {
             setCount((prevCounter) => prevCounter + 1)
-        }, 60);
+        }, 100);
     }
 
     const decreaseCounter = () => {
         if(intervalRef.current) return;
         intervalRef.current = setInterval(() => {
             setCount((prevCounter) => prevCounter - 1)
-        }, 60);
+        }, 100);
     }
     
     const stopCounter = () => {
@@ -43,20 +45,22 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
         <div className='flex justify-center'>
             <div className='flex justify-between bg-indigo-200 w-64'>
                 <button 
+                    id="increment-counter"
                     className="h-10 px-5 m-3 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700"
-                    onClick={() => incrementCounter(count)}
-                    onMouseDown={() => increaseCounter(count)}
-                    onMouseUp={() => stopCounter(count)}
+                    onClick={() => incrementCounter()}
+                    onMouseDown={() => increaseCounter()}
+                    onMouseUp={() => stopCounter()}
                     onMouseLeave={stopCounter}
                     >
                         +
                 </button>
                 <div className="flex items-center text-lg">Count is {count}</div>
                 <button 
+                    id="decrement-counter"
                     className="h-10 px-5 m-3 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700"
                     onClick={() => decrementCounter(count)}
-                    onMouseDown={() => decreaseCounter(count)}
-                    onMouseUp={() => stopCounter(count)}
+                    onMouseDown={() => decreaseCounter()}
+                    onMouseUp={() => stopCounter()}
                     onMouseLeave={stopCounter}
                     >
                         -
