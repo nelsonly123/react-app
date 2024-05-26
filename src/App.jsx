@@ -45,6 +45,10 @@ function App() {
             Remove all counters
             </button>
       </div>
+      <div 
+        className="text-center font-bold">
+          <a href='https://github.com/nelsonly123/react-app/tree/main'>Back to repo</a>
+          </div>
     </>
   )
 }
