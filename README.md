@@ -1,8 +1,9 @@
-How to update site:  
+# How to update site:  
 
-git add .  
+Add changes made: `git add .`  
 git commit -m "message here"  
 git push origin "branch name"  
 npn run deploy  
 
-url: https://nelsonly123.github.io/react-app/
+## deployed [URL](https://nelsonly123.github.io/react-app/)
+
