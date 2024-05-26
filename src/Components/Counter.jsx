@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 export default function Counter({ id, handleRemoveSingleCounter}) {
-    const [count, setCount] = useState(0);
+    let [count, setCount] = useState(0);
     const intervalRef = useRef(null);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
     const decrementCounter = () => {
         setCount((prevCount) => prevCount - 1)
     }
-    
+
     const handleResetCounter = () => {
         setCount(0);
     }
@@ -58,7 +58,7 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
                 <button 
                     id="decrement-counter"
                     className="h-10 px-5 m-3 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700"
-                    onClick={() => decrementCounter(count)}
+                    onClick={() => decrementCounter()}
                     onMouseDown={() => decreaseCounter()}
                     onMouseUp={() => stopCounter()}
                     onMouseLeave={stopCounter}
