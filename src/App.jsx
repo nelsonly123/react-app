@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center">Vite + React + Tailwind</h1>
+      <h1 className="text-3xl font-bold underline text-center">Vite + React + Tailwind + etc</h1>
       <div className='overflow-auto h-64'>
         {counter.map((id) => 
           <ul key={id}>
