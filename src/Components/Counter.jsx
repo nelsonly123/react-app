@@ -78,7 +78,6 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
                     > remove counter
                 </button>
             </div>
-            <>Testing commit</>
         </div>
     )
 }
