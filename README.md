@@ -2,7 +2,7 @@ How to update site:
 
 git add .  
 git commit -m "message here"  
-git push origin <branch name>  
+git push origin "branch name"  
 npm run build  
 npn run deploy  
 
