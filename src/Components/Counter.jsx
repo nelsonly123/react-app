@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import tobey from '../assets/tobey-cry.gif'
 
 export default function Counter({ id, handleRemoveSingleCounter}) {
     let [count, setCount] = useState(0);
@@ -77,6 +78,7 @@ export default function Counter({ id, handleRemoveSingleCounter}) {
                     onClick={() => handleRemoveSingleCounter(id)}
                     > remove counter
                 </button>
+                <div><img className='w-10 h-10 m-3' src={tobey}></img></div>
             </div>
         </div>
     )
